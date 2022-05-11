@@ -1,11 +1,18 @@
 #!/bin/bash
 
-echo " Welcome to Shell Scripting Program: Computations stored with an array";
+echo " Welcome to Shell Scripting Program: Randomly generated values and Computations stored with an array";
 
-# Take three user input
-read -p "Enter the value of a:" a;
-read -p "Enter the value of b:" b;
-read -p "Enter the value of c:" c;
+	# Take three user input
+#read -p "Enter the value of a:" a;
+#read -p "Enter the value of b:" b;
+#read -p "Enter the value of c:" c;
+
+	# Generate random values
+a=$((RANDOM%89+10));
+b=$((RANDOM%89+10));
+c=$((RANDOM%89+10));
+
+echo $a $b $c;
 
 expr[0]=$(($a+$b*$c));
 expr[1]=$(($a*$b+$c));
@@ -13,4 +20,8 @@ expr[2]=$(($a+$b/$c));
 expr[3]=$(($a%$b+$c));
 
 echo ${expr[@]};
+
+
+
+
 
